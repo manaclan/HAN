@@ -28,7 +28,7 @@ class ImageTester():
         timer_test = utility.timer()
         for idx_scale, scale in enumerate(self.scale):
             img = cv2.imread(self.args.dir_demo)
-            lr, = common.set_channel(lr, n_channels=self.args.n_colors)
+            lr, = common.set_channel(img, n_channels=self.args.n_colors)
             lr, = common.np2Tensor(lr, rgb_range=self.args.rgb_range)
             lr, = self.prepare(lr.unsqueeze(0))
             sr = self.model(lr, idx_scale)
