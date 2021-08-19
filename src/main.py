@@ -12,7 +12,7 @@ checkpoint = utility.checkpoint(args)
 
 def main():
     global model
-    if args.data_test == ['video']:
+    if args.data_test == ['image']:
         # i've modifed so that video could be image
         from imagetester import ImageTester
         model = model.Model(args, checkpoint)
