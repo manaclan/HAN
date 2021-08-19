@@ -35,7 +35,7 @@ class ImageTester():
             sr = utility.quantize(sr, self.args.rgb_range).squeeze(0)
             normalized = sr * 255 / self.args.rgb_range
             ndarr = normalized.byte().permute(1, 2, 0).cpu().numpy()
-            cv2.imwrite(args.dest_file,ndarr)
+            cv2.imwrite(self.args.dest_file,ndarr)
 
     def prepare(self, *args):
         device = torch.device('cpu' if self.args.cpu else 'cuda')
