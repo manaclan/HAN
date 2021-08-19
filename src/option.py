@@ -21,6 +21,8 @@ parser.add_argument('--seed', type=int, default=1,
 # Data specifications
 parser.add_argument('--dir_data', type=str, default='/media/zrh/备份/AIM/X4',
                     help='dataset directory')
+parser.add_argument('--dest_file', type=str, default='/media/zrh/备份/AIM/X4',
+                    help='dataset directory')
 parser.add_argument('--dir_demo', type=str, default='../test',
                     help='demo image directory')
 parser.add_argument('--data_train', type=str, default='DIV2K',
